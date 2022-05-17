@@ -1,10 +1,15 @@
-.QuantityOuterBox {
-  width: 80%;
+.AddRemoveProduct {
+  width: 85%;
   height: 80vh;
-  margin: 2vh auto;
+  margin: auto;
   background-color: #125a6e;
   border-radius: 12px;
-  padding-left: 10%;
+  padding: 2% 6%;
+  overflow-y: scroll;
+}
+
+.AddRemoveProduct::-webkit-scrollbar {
+  display: none;
 }
 
 .QuantityTextbox {
@@ -13,5 +18,27 @@
 
 .QuantityLabel {
   color: #ffffff;
+  margin-top: 3%;
+}
+
+.QuantityOuter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.NextBtn {
+  background-color: #2d243d;
+  margin-left: 3%;
+}
+
+.NextBtn:hover,
+.NextBtn:focus,
+.NextBtn:active,
+.NextBtn.active {
+  background-color: #0f3f4d;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=GetQuantity.css.map */

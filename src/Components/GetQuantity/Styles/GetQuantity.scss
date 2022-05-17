@@ -1,19 +1,43 @@
-@import '../../../ColourTheme/ColourTheme.scss' ;
+@import '../../../ColourTheme/ColourTheme.scss';
 
-.QuantityOuterBox{
-    width: 80%;
+.AddRemoveProduct {
+    width: 85%;
     height: 80vh;
-    margin: 2vh auto;
+    margin:auto;
     background-color: $primaryColor;
     border-radius: 12px;
-    padding-left: 10%;
+    padding:2% 6%;
+    overflow-y: scroll;
 }
 
-.QuantityTextbox{
+.AddRemoveProduct::-webkit-scrollbar{
+    display: none;
+}
+
+.QuantityTextbox {
     width: 25%;
-    
+
 }
 
-.QuantityLabel{
+.QuantityLabel {
     color: $white;
+    margin-top: 3%;
+}
+
+.QuantityOuter {
+    display: flex;
+}
+
+.NextBtn {
+    background-color: $nextBtn;
+    margin-left: 3%;
+}
+
+.NextBtn:hover,
+.NextBtn:focus,
+.NextBtn:active,
+.NextBtn.active {
+    background-color: $secondaryColor;
+    outline: none;
+    box-shadow: none;
 }
