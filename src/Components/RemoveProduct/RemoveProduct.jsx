@@ -1,6 +1,5 @@
 import React, { useState, useContext } from 'react'
 import { Form, Button, Row, Col } from 'react-bootstrap'
-import {useNavigate} from 'react-router-dom'
 import { productsContext } from '../../Store/ProductsContext'
 import './Styles/RemoveProduct.css'
 
@@ -13,7 +12,6 @@ function RemoveProduct({ count }) {
     const [productDetails, setProductDetails] = useState({})
     const [errMsg, setErrMsg] = useState()
     const { products } = useContext(productsContext)
-    const navigate = useNavigate()
     const handleChange = (e) => {
         const { name, value } = e.target
         setProductDetails({ ...productDetails, [name]: value })
@@ -32,7 +30,7 @@ function RemoveProduct({ count }) {
                 errStr += "  " + productDetails[i + 'code']
             }
         }
-        if(errMsg){
+        if (errMsg) {
             setErrMsg(`${errStr} are not valid products`)
         }
     }
