@@ -18,7 +18,7 @@ function AddProduct({ count }) {
   }
 
 
-  const AddProducts = (i) => {
+  const AddProducts = () => {
     for (let i = 0; i < count; i++) {
       if (products[productDetails[i + 'code']]) {
         products[productDetails[i + 'code']].quantity = parseInt(products[productDetails[i + 'code']].quantity) + parseInt(productDetails[i + 'quantity'])

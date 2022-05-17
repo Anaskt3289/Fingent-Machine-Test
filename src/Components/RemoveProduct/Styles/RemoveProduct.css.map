@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAA;EACH,KAAK,ECEC,OAAO;CDDhB",
+    "sources": [
+        "RemoveProduct.scss",
+        "../../../ColourTheme/ColourTheme.scss"
+    ],
+    "names": [],
+    "file": "RemoveProduct.css"
+}

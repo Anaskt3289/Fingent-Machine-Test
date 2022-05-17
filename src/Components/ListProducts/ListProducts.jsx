@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState, useContext } from 'react'
 import { Table } from 'react-bootstrap'
+import { productsContext } from '../../Store/ProductsContext'
 import './Styles/ListProducts.css'
 
 function ListProducts() {
+
+    const productCodes = []
+    const { products } = useContext(productsContext)
+
+
+    for (let i in products) {
+        productCodes.push(i)
+    }
     return (
         <div className='AddRemoveProduct'>
             <Table hover className='listProductsTable'>
@@ -15,33 +24,18 @@ function ListProducts() {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
+                    {
+                        productCodes.map((code, index) =>
+                            <tr>
+                                <td>{index + 1}</td>
+                                <td>{code}</td>
+                                <td>{products[code].name}</td>
+                                <td>{products[code].quantity}</td>
+                            </tr>
+                        )
+                    }
 
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
 
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                   
                 </tbody>
             </Table>
         </div>
