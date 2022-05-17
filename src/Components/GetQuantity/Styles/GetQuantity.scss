@@ -1,0 +1,19 @@
+@import '../../../ColourTheme/ColourTheme.scss' ;
+
+.QuantityOuterBox{
+    width: 80%;
+    height: 80vh;
+    margin: 2vh auto;
+    background-color: $primaryColor;
+    border-radius: 12px;
+    padding-left: 10%;
+}
+
+.QuantityTextbox{
+    width: 25%;
+    
+}
+
+.QuantityLabel{
+    color: $white;
+}

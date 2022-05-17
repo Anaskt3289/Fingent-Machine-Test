@@ -1,6 +1,5 @@
 import React from 'react'
 import { Navbar, Container, ButtonGroup, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './Styles/headerTabs.css'
 
 function HeaderTabs() {

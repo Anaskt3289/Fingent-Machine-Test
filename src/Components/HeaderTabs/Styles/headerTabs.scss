@@ -6,7 +6,7 @@
 }
 
 .tabBtn {
-    background-color: $btnColor;
+    background-color: $primaryColor;
     border: none;
 }
 
@@ -14,7 +14,7 @@
 .tabBtn:focus,
 .tabBtn:active,
 .tabBtn.active {
-    background-color: $btnSecondary;
+    background-color: $secondaryColor;
     outline: none;
     box-shadow: none;
 }
