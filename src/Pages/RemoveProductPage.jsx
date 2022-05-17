@@ -2,13 +2,13 @@ import React from 'react'
 import HeaderTabs from '../Components/HeaderTabs/HeaderTabs'
 import GetQuantity from '../Components/GetQuantity/GetQuantity'
 
-function LandingPage() {
+function RemoveProductPage() {
   return (
     <div>
-      <HeaderTabs />
-      <GetQuantity pageType='Add' />
+      <HeaderTabs/>
+      <GetQuantity pageType='Remove'/>
     </div>
   )
 }
 
-export default LandingPage
+export default RemoveProductPage

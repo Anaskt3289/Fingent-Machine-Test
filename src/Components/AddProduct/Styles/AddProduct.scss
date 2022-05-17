@@ -1,7 +1,28 @@
+@import '../../../ColourTheme/ColourTheme.scss';
+
 .addProductTextOuter{
     margin-top: 3%;
 }
 
 .addProductLabelOuter{
     margin-top: 5%;
+}
+
+.SaveBtnOuter{
+    text-align: center;
+    margin-top: 3%;
+}
+
+.SaveBtn{
+    background-color: $nextBtn;
+    width: 20%;
+}
+
+.SaveBtn:hover,
+.SaveBtn:focus,
+.SaveBtn:active,
+.SaveBtn.active {
+    background-color: $secondaryColor;
+    outline: none;
+    box-shadow: none;
 }

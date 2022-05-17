@@ -5,4 +5,24 @@
 .addProductLabelOuter {
   margin-top: 5%;
 }
+
+.SaveBtnOuter {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.SaveBtn {
+  background-color: #2d243d;
+  width: 20%;
+}
+
+.SaveBtn:hover,
+.SaveBtn:focus,
+.SaveBtn:active,
+.SaveBtn.active {
+  background-color: #0f3f4d;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 /*# sourceMappingURL=AddProduct.css.map */

@@ -51,6 +51,10 @@ function AddProduct({ count }) {
 
         </Row>)}
 
+        <div className='SaveBtnOuter'>
+        <Button className='SaveBtn'>Save</Button>
+        </div>
+
     </div>
   )
 }
