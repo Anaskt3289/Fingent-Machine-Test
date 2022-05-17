@@ -5,7 +5,7 @@ import GetQuantity from '../Components/GetQuantity/GetQuantity'
 function LandingPage() {
   return (
     <div>
-      <HeaderTabs />
+      <HeaderTabs add='active' remove='' list='' />
       <GetQuantity pageType='Add' />
     </div>
   )
