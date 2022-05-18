@@ -34,8 +34,9 @@ function RemoveProduct({ count }) {
         }
         if (errMsg) {
             setErrMsg(`${errStr} are not valid products`)
+        }else{
+            setErrMsg('Products Removed Successfully')
         }
-        navigate('/listProducts')
     }
 
     return (
