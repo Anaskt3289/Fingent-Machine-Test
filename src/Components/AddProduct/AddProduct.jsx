@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Form, Button, Row, Col } from 'react-bootstrap'
+import {useNavigate} from 'react-router-dom'
 import { productsContext } from '../../Store/ProductsContext'
 import './Styles/AddProduct.css'
 
@@ -11,6 +12,7 @@ function AddProduct({ count }) {
 
   const [productDetails, setProductDetails] = useState({})
   const { products } = useContext(productsContext)
+  const navigate = useNavigate()
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -26,6 +28,7 @@ function AddProduct({ count }) {
         products[productDetails[i + 'code']] = { name: productDetails[i + 'name'], quantity: parseInt(productDetails[i + 'quantity']) }
       }
     }
+    navigate('/listProducts')
   }
 
   return (

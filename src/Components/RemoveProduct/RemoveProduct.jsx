@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react'
 import { Form, Button, Row, Col } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 import { productsContext } from '../../Store/ProductsContext'
 import './Styles/RemoveProduct.css'
 
@@ -12,6 +13,7 @@ function RemoveProduct({ count }) {
     const [productDetails, setProductDetails] = useState({})
     const [errMsg, setErrMsg] = useState()
     const { products } = useContext(productsContext)
+    const navigate = useNavigate()
     const handleChange = (e) => {
         const { name, value } = e.target
         setProductDetails({ ...productDetails, [name]: value })
@@ -33,6 +35,7 @@ function RemoveProduct({ count }) {
         if (errMsg) {
             setErrMsg(`${errStr} are not valid products`)
         }
+        navigate('/listProducts')
     }
 
     return (
@@ -41,9 +44,6 @@ function RemoveProduct({ count }) {
                 <p className='errMsg'>{errMsg}</p>
                 <Col>
                     <Form.Label htmlFor="inputPassword5" className='QuantityLabel'>Product Code</Form.Label>
-                </Col>
-                <Col>
-                    <Form.Label htmlFor="inputPassword5" className='QuantityLabel'>Product Name</Form.Label>
                 </Col>
                 <Col>
                     <Form.Label htmlFor="inputPassword5" className='QuantityLabel'>Quantity</Form.Label>
@@ -58,16 +58,6 @@ function RemoveProduct({ count }) {
                             aria-describedby="passwordHelpBlock"
                             className='addProductTextbox'
                             name={`${index}code`}
-                            onChange={handleChange}
-                        />
-                    </Col>
-
-                    <Col>
-                        <Form.Control
-                            type="text"
-                            aria-describedby="passwordHelpBlock"
-                            className='addProductTextbox'
-                            name={`${index}name`}
                             onChange={handleChange}
                         />
                     </Col>
